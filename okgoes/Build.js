@@ -33,15 +33,7 @@ class CopyOperator {
                     CopyOperator.mkdir(destPath);
                 }
                 if (fs.existsSync(basePath + '/' + file)) {
-                    if (file === 'test.js') {
-                        if (!fs.existsSync(destPath + '/public')) {
-                            CopyOperator.mkdir(destPath + '/public');
-                        }
-                        fs.writeFileSync(destPath + '/public/index.js', fs.readFileSync(basePath + '/' + file));
-                    } else {
-                        fs.copyFileSync(basePath + '/' + file, destPath + '/' + file);
-                    }
-                    
+                    fs.copyFileSync(basePath + '/' + file, destPath + '/' + file);
                 }
             }
         }
