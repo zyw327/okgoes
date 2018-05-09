@@ -19,17 +19,23 @@ const Application = Okgoes.Application;
 ```
 ## Mysql
 ```js
-const Application = Okgoes.Mysql;
+const Mysql = Okgoes.Mysql;
+const mysql = new Mysql({host: '127.0.0.1', user: 'root', passwd: 'root', database: 'test', port: '3306'});
+let select = mysql.getSelect();
+selet.from({name: 'test', as: 't'}, ['id', 'name', ['age', 'pAge']]).fetchAll();
+//相当于sql: SELECT id, name, age as pAge from test as t;
+selet.from({name: 'test', as: 't'}, ['id', 'name', ['age', 'pAge']]).where({id: {$gt: 4}}).fetchAll();
+//相当于sql: SELECT id, name, age as pAge from test as t where t.id > 4;
 ```
 ## Mongodb
 ```js
-const Application = Okgoes.Mongodb;
+const Mongodb = Okgoes.Mongodb;
 ```
 ## Redis
 ```js
-const Application = Okgoes.Redis;
+const Redis = Okgoes.Redis;
 ```
 ## ControllerAction
 ```js
-const Application = Okgoes.ControllerAction;
+const ControllerAction = Okgoes.ControllerAction;
 ```
