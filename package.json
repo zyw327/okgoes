@@ -1,0 +1,40 @@
+{
+  "name": "okgoes",
+  "version": "1.0.0",
+  "description": "okgoes.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zyw327/okgoes.git"
+  },
+  "keywords": [
+    "okgoes",
+    "okgoes.js",
+    "koa",
+    "mysql",
+    "mongodb",
+    "redis"
+  ],
+  "author": "zengyuwen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/zyw327/okgoes/issues"
+  },
+  "homepage": "https://github.com/zyw327/okgoes#readme",
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "koa": "^2.5.1",
+    "koa-body": "^2.5.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.1",
+    "koa-static": "^4.0.2",
+    "mongodb": "^3.0.8",
+    "mysql": "^2.15.0",
+    "mz": "^2.7.0",
+    "redis": "^2.8.0"
+  }
+}

@@ -1,0 +1,11 @@
+body{
+	margin:0 0;
+}
+div {
+	margin: 10px 10px;
+}
+
+p {
+	text-indent: 2rem;
+	font-size: 1.2rem;
+}
