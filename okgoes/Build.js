@@ -28,7 +28,7 @@ class CopyOperator {
             if (this.stat(basePath + '/' + file).isDirectory() && file !== 'okgoes') {
                 this.copy(basePath + '/' + file, destPath + '/' + file);
             }
-            if (this.stat(basePath + '/' + file).isFile() && file !== 'index.js') {
+            if (this.stat(basePath + '/' + file).isFile()) {
                 if (!fs.existsSync(destPath)) {
                     CopyOperator.mkdir(destPath);
                 }
