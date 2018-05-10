@@ -1,6 +1,6 @@
 # okgoes
 ## Install
-```bash
+```js
 npm install --save okgoes
 const Okgoes = require('okgoes'); 
 ```
@@ -119,19 +119,19 @@ let client = redis.getClient();
 const ControllerAction = Okgoes.ControllerAction;
 
 class IndexController extends ControllerAction{
-	constructor(req, res){
-		super(req, res);
-	}
-
-	async index() {
-		this.response.cookie.setCookie('name', 'zyw1223423');
-		await this.renderHtml({msg: 'Hello World!'});
+    constructor(req, res){
+        super(req, res);
     }
-    
+
+    async index() {
+        this.response.cookie.setCookie('name', 'zyw1223423');
+        await this.renderHtml({msg: 'Hello World!'});
+    }
+
     async json() {
-		this.response.cookie.setCookie('name', 'zyw1223423');
-		await this.renderJson({name: 'zyw'});
-	}
+        this.response.cookie.setCookie('name', 'zyw1223423');
+        await this.renderJson({name: 'zyw'});
+    }
 }
 module.exports = IndexController;
 ```
