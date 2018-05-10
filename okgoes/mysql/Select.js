@@ -110,8 +110,10 @@ class Select {
             }
             attr = attr.substr(0, attr.length - 1);
             sql = sql.replace(' ${{JOINFIELD}} ', /^\s+$/.test(attr) || attr == '' ? '' : ',' + attr);
+        } else {
+            sql = sql.replace(' ${{JOINFIELD}} ', '');
         }
-
+        
         if (this.whereOptions) {
             sql += ' WHERE ' + this.parseSelect.where(this.whereOptions, this.parseSelect.getTableName(this.fromTable.table));
             if (joinWhere) {
