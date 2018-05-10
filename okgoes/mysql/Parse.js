@@ -96,27 +96,27 @@ class Parse {
                         break;
                     case '$ne':
                         if (typeof(sValue) === 'string' || typeof(sValue) === 'number' || sValue instanceof Date) {
-                            return ' <> ' + (typeof(value) === 'number' ? value : "'" + value + "'");
+                            return ' <> ' + (typeof(sValue) === 'number' ? sValue : "'" + sValue + "'");
                         }
                         break;
                     case '$gt':
                         if (typeof(sValue) === 'string' || typeof(sValue) === 'number' || sValue instanceof Date) {
-                            return ' > ' + (typeof(value) === 'number' ? value : "'" + value + "'");
+                            return ' > ' + (typeof(sValue) === 'number' ? sValue : "'" + sValue + "'");
                         }
                         break;
                     case '$lt':
                         if (typeof(sValue) === 'string' || typeof(sValue) === 'number' || sValue instanceof Date) {
-                            return ' < ' + (typeof(value) === 'number' ? value : "'" + value + "'");                                
+                            return ' < ' + (typeof(sValue) === 'number' ? sValue : "'" + sValue + "'");                                
                         }
                         break;
                     case '$gte':
                         if (typeof(sValue) === 'string' || typeof(sValue) === 'number' || sValue instanceof Date) {
-                            return ' >= ' + (typeof(value) === 'number' ? value : "'" + value + "'");       
+                            return ' >= ' + (typeof(sValue) === 'number' ? sValue : "'" + sValue + "'");       
                         }
                         break;
                     case '$lte':
                         if (typeof(sValue) === 'string' || typeof(sValue) === 'number' || sValue instanceof Date) {
-                            return ' <= ' + (typeof(value) === 'number' ? value : "'" + value + "'");        
+                            return ' <= ' + (typeof(sValue) === 'number' ? sValue : "'" + sValue + "'");        
                         }
                         break;
                     case '$not':
