@@ -22,7 +22,7 @@ class CopyOperator {
     copy(basePath, destPath, encoding) {
         let dirs = this.readDir(basePath, encoding);
         for (let file of dirs) {
-            if (file === '.git' || file === 'package.json') {
+            if (file === '.git') {
                 return ;
             }
             if (this.stat(basePath + '/' + file).isDirectory() && file !== 'okgoes') {
