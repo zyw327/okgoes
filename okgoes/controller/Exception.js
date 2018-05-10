@@ -21,6 +21,11 @@ class ControllerException extends Exception {
                 html = html.toString().replace('<%action%>', this.message);
                 html = html.replace('<%stack%>', this.stack.replace(/\n/g, '<br>'));
                 break;
+            case 'c3':
+                html = fs.readFileSync(__dirname + '/exception/permission_denied.html');
+                html = html.toString().replace('<%action%>', this.message);
+                html = html.replace('<%stack%>', this.stack.replace(/\n/g, '<br>'));
+                break;
             default :
                 html = fs.readFileSync(path.dirname(__dirname) + '/exception/default.html');
                 html = html.toString().replace('<%stack%>', this.stack.replace(/\</, '&lt;').replace(/\>/, '&gt;').replace(/\n/g, '<br>'));
@@ -35,4 +40,7 @@ ControllerException.NONE_CONTROLLER_CODE = 500;
 ControllerException.NODE_ACTION = '控制器方法不存在';
 ControllerException.NONE_ACTION_TYPE = 'c2';
 ControllerException.NODE_ACTION_CODE = 500;
+ControllerException.PERMISSION_DENIED = '服务器拒绝响应';
+ControllerException.PERMISSION_DENIED_TYPE = 'c3';
+ControllerException.PERMISSION_DENIED_CODE = '403';
 module.exports = ControllerException;

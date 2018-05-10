@@ -8,6 +8,10 @@ class IndexController extends ControllerAction{
 		this.example = new Example();
 	}
 
+	async _init() {
+		return true;
+	}
+
 	async index() {
 		this.response.cookie.setCookie('name', 'zyw1223423');
 		await this.renderHtml({msg: 'Hello World!', example: this.example.getMsg()});

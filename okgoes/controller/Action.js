@@ -13,6 +13,10 @@ class Action {
         this.response = response;
     }
 
+    async _init() {
+        return true;
+    }
+
     async renderHtml(path, params) {
         if (!path || typeof(path) !== 'string') {
             params = path;

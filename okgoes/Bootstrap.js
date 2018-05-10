@@ -23,6 +23,9 @@ class Bootstrap {
             controller = new Controller(this.request, this.response);
             controller.request = this.request;
             controller.response = this.response;
+            if (typeof(controller._init) === 'function' && (controller._init.call(this).toString() === '[object Promise]' && !(await controller._init()) || !controller._init())) {
+                throw new ControllerException(controller, ControllerException.PERMISSION_DENIED_CODE, ControllerException.PERMISSION_DENIED_TYPE);
+            }
             if (typeof(controller[action]) !== 'function') {
                 throw new ControllerException(action, ControllerException.NODE_ACTION_CODE, ControllerException.NONE_ACTION_TYPE);
             }
