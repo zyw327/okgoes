@@ -125,7 +125,12 @@ class IndexController extends ControllerAction{
 
 	async index() {
 		this.response.cookie.setCookie('name', 'zyw1223423');
-		await this.render({msg: 'Hello World!'});
+		await this.renderHtml({msg: 'Hello World!'});
+    }
+    
+    async json() {
+		this.response.cookie.setCookie('name', 'zyw1223423');
+		await this.json({name: 'zyw'});
 	}
 }
 module.exports = IndexController;
