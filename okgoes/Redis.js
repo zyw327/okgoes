@@ -8,7 +8,7 @@ class Redis {
      * @param {Object} config
      */
     constructor(config) {
-        this.client = this.createClient(config);
+        this.client = redis.createClient(config);
         this.client.on('connect', (err) => {
             if (err) {
                 console.log(err);
@@ -17,12 +17,11 @@ class Redis {
     }
 
     /**
-     * 创建一个redis客户端
-     * @param {Object} config
+     * 获取redis客户端
      * @return {Object}
      */
-    createClient(config) {
-        return redis.createClient(config);
+    getClient() {
+        return this.client;
     }
 
     /**
