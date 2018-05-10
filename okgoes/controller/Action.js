@@ -13,7 +13,7 @@ class Action {
         this.response = response;
     }
 
-    async render(path, params) {
+    async renderHtml(path, params) {
         if (!path || typeof(path) !== 'string') {
             params = path;
             path = '/' + this.request.getController().toLocaleLowerCase() + '/' + this.request.getAction();
@@ -21,19 +21,7 @@ class Action {
         await this.response.render(path, params);
     }
 
-    redirect(url) {
-        this.response.redirect(url);
-    }
-
-    getResponse() {
-        return this.response;
-    }
-
-    getRequest() {
-        return this.request;
-    }
-
-    async json(data) {
+    async renderJson(data) {
         await this.response.setBody(data);
     }
 }

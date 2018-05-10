@@ -10,7 +10,20 @@ class IndexController extends ControllerAction{
 
 	async index() {
 		this.response.cookie.setCookie('name', 'zyw1223423');
-		await this.render({msg: 'Hello World!', example: this.example.getMsg()});
+		await this.renderHtml({msg: 'Hello World!', example: this.example.getMsg()});
+	}
+
+	async json() {
+		let params = this.request.getAllParams();
+		let postParams = this.request.getPost();
+		let query = this.request.getQuery();
+		let controller = this.request.getController();
+		let action = this.request.getAction();
+		await this.renderJson({user: 'okgoes', params: params, query: query, postParams: postParams, action: action, controller: controller});
+	}
+
+	async redirect() {
+		this.response.redirect('http://blog.okgoes.com');
 	}
 }
 
