@@ -39,6 +39,19 @@ await selet.from({name: 'test', as: 't'}, ['id', 'name', ['age', 'pAge']]).fetch
 //相当于sql: SELECT id, name, age as pAge from test as t;
 await selet.from({name: 'test', as: 't'}, ['id', 'name', ['age', 'pAge']]).where({id: {$gt: 4}}).fetchAll();
 //相当于sql: SELECT id, name, age as pAge from test as t where t.id > 4;
+//插入
+await mysql.insert({name: 'ttt', age: 18}, {table: 'test'});
+// 开启事务
+let transaction = await mysql.transaction();
+try{
+    await mysql.insert({name: 'ttt', age: 18}, {table: 'test', transaction: transaction});
+    await mysql.update({name: 'ttt', age: 18}, {table: 'test', transaction: transaction, where: {id: {$gt: 4}}});
+    // 提交事务
+    await transaction.commit();
+} catch (error) {
+    // 回滚事务
+    await transaction.rollback();
+}
 ```
 ## Mongodb
 ```js
