@@ -98,7 +98,7 @@ await redis.expire('key', 1000);
 await redis.expireat('key', Date.parse(new Date()) / 1000 + 1000);
 // 获取符合规则的键
 await redis.keys(/\S+/);
- let client = redis.getClient();
+let client = redis.getClient();
 ```
 ## ControllerAction
 ```js
