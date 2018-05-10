@@ -1,20 +1,14 @@
 # okgoes
 ## Install
 ```js
-npm install --save okgoes
-const Okgoes = require('okgoes'); 
-```
-## Build
-* 建立项目目录结构
-```js
-// 引入okgoe
-const Okgoes = require('okgoes');
-// 创建build对象
-let build = new Okgoes.Build();
-build.build(__dirname); //在当前目录建立目录结构，默认当前目录
+npm install --save okgoes-cli
+okgoes-cli project
+cd project
+npm install
 ```
 ## Application
 ```js
+const Okgoes = require('okgoes');
 const path = require('path');
 // 设置项目根路径
 global.PROJECT_PATH = path.dirname(__dirname);
