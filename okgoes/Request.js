@@ -50,7 +50,7 @@ class Request {
         if (name) {
             return this.request.body[name];
         }
-        return this.this.request.body;
+        return this.request.body;
     }
 
     getUrlPath() {
