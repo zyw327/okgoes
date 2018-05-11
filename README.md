@@ -5,6 +5,7 @@ npm install --save okgoes-cli
 okgoes-cli project
 cd project
 npm install
+npm run start
 ```
 ## Application
 ```js
