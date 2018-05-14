@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const DebugException = require('./Debug/Exception');
+const DebugException = require('./debug/Exception');
 class Debug {
     constructor(isDebug, debugType) {
         this.type = isDebug ? (debugType || Debug.CONSOLE) : Debug.NONE;

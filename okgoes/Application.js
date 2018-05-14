@@ -10,7 +10,7 @@ const koaStatic = require('koa-static');
 const convert = require('koa-convert');
 
 const Bootstrap = require('./Bootstrap');
-const ApplicationDebug = require('./Application/Debug');
+const ApplicationDebug = require('./application/Debug');
 
 class Application {
     constructor() {

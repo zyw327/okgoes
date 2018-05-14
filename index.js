@@ -4,10 +4,11 @@ const Redis = require('./okgoes/Redis');
 const Application = require('./okgoes/Application');
 const ControllerAction = require('./okgoes/controller/Action');
 const Build = require('./okgoes/Build');
-
+const Email = require('./okgoes/Email');
 exports.Mysql = Mysql;
 exports.Mongodb = Mongodb;
 exports.Redis = Redis;
 exports.Application = Application;
 exports.ControllerAction = ControllerAction;
 exports.Build = Build;
+exports.Email = Email;
