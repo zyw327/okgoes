@@ -1,10 +1,10 @@
-const Mysql = require('./okgoes/Mysql');
-const Mongodb = require('./okgoes/Mongodb');
-const Redis = require('./okgoes/Redis');
-const Application = require('./okgoes/Application');
-const ControllerAction = require('./okgoes/controller/Action');
-const Build = require('./okgoes/Build');
-const Email = require('./okgoes/Email');
+const Mysql = require('./lib/Mysql');
+const Mongodb = require('./lib/Mongodb');
+const Redis = require('./lib/Redis');
+const Application = require('./lib/Application');
+const ControllerAction = require('./lib/controller/Action');
+const Build = require('./lib/Build');
+const Email = require('./lib/Email');
 exports.Mysql = Mysql;
 exports.Mongodb = Mongodb;
 exports.Redis = Redis;
