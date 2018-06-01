@@ -48,6 +48,46 @@ try{
     await transaction.rollback();
 }
 ```
+### Mysql.Model
+```js
+const Model = require('okgoes').Mysql.Model;
+const Field = Model.Field;
+class User extends Model {
+    constructor() {
+        // name表示表名，as表示表的别名
+        super({name: 'user', as: 'User'}, {
+            id: {
+                type: Field.INTEGER, // 字段类型
+                isPrimary: true, // 是否主键
+                isAllowNull: false, // 是否可以为空
+                autoIncrement: true // 设置自增
+            },
+            name: {
+                type: Field.STRING(100),
+                isAllowNull: false
+            },
+            age: {
+                type: Field.INTEGER,
+                isAllowNull: false
+            },
+            sex: {
+                type: Field.INTEGER(1),
+                isAllowNull: false
+            },
+            hobby: {
+                type: Field.STRING(100)
+            }, 
+            school: {
+                type: Field.STRING(100)
+            }
+        });
+        this.setDbAdapter(mysql);
+    }
+}
+const user = new User();
+user.create(true); // 表存在则删除重建
+user.create(false); // 表不存在则创建默认false
+```
 ## Mongodb
 ```js
 const Mongodb = Okgoes.Mongodb;
