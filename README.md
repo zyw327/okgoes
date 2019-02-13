@@ -7,6 +7,7 @@ cd project
 npm install
 npm run start
 ```
+## [详细文档](docs/index.md)
 ## Application
 ```js
 const Okgoes = require('okgoes');
