@@ -88,7 +88,7 @@ this.renderHtml({});
 // 指定渲染路径,path为模板文件的路径，可以是相对于views目录的路径，指定传递到模板的参数
 this.renderHtml('path', {});
 ```
-s
+
 - renderJson
 ```js
 // 响应类型是：application/json，输出json类型数据到浏览器
