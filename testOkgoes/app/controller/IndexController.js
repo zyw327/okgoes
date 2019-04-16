@@ -1,4 +1,4 @@
-const ControllerAction = require('okgoes').ControllerAction;
+const ControllerAction = require('../../../index').ControllerAction;
 const Example = require('../model/Example');
 
 class IndexController extends ControllerAction{
