@@ -7,9 +7,9 @@ global.APPLICATION_PATH = global.PROJECT_PATH + '/app';
 // 创建应用实例
 let app = new Okgoes.Application();
 // 开启视图调试模式
-app.setIsDebug(false);
+// app.setIsDebug(false);
 // 开启cookie
-app.setUseCookie(true);
-app.setDefaultIndex("json");
+// app.setUseCookie();
+// app.setDefaultIndex("json");
 // 监听端口
-app.listen(3002);
+app.listen();
