@@ -23,7 +23,8 @@ class IndexController extends ControllerAction{
 		let query = this.request.getQuery();
 		let controller = this.request.getController();
 		let action = this.request.getAction();
-		await this.renderJson({user: 'okgoes', params: params, query: query, postParams: postParams, action: action, controller: controller});
+		console.log(global.CONFIG);
+		await this.renderJson(global.CONFIG);
 	}
 
 	async redirect() {
