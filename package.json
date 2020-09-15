@@ -32,11 +32,11 @@
     "koa-router": "^7.4.0",
     "koa-session": "^5.8.1",
     "koa-static": "^4.0.2",
-    "mongodb": "^3.0.8",
-    "mysql": "^2.15.0",
+    "mongodb": "^3.6.2",
+    "mysql": "^2.18.1",
     "mz": "^2.7.0",
     "nodemailer": "^4.6.4",
-    "redis": "^2.8.0",
+    "redis": "^3.0.2",
     "request": "^2.87.0"
   }
 }
