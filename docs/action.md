@@ -29,6 +29,10 @@ constructor(req, res){
  this.request.post();
  // 获取psot传递对应key的数据
  this.request.post("key");
+
+ // 获取原生数据
+ this.request.getRowData();
+
  ```
  - 获取`get`传递的数据
  ```js

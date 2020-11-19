@@ -1,7 +1,7 @@
 # okgoes
 ## Install
 ```js
-npm install --save okgoes-cli
+npm install -g okgoes-cli
 okgoes-cli project
 cd project
 npm install
